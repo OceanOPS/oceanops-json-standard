@@ -1,0 +1,41 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"properties": {
+	  "contact_role": {
+		"type": "object",
+		"properties": {
+		  "role_id": {
+			"type": "integer"
+		  },
+		  "role_name": {
+			"type": "string"
+		  }
+		},
+		"required": ["role_id", "role_name"]
+	  },
+	  "contact_name": {
+		"type": "string"
+	  },
+	  "contact_id": {
+		"type": "integer"
+	  },
+	  "contact_country": {
+		"$ref": "#/definitions/country"
+	  },
+	  "contact_agencies": {
+		"type": "array",
+		"items": {
+		  "$ref": "#/definitions/agency"
+		}
+	  }
+	},
+	"required": [
+	  "contact_id",
+	  "contact_name"
+	],
+	"definitions": {
+	  "country": { "$ref": "country.schema.json" },
+	  "agency": { "$ref": "agency.schema.json" }
+	}
+  }

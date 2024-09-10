@@ -1,0 +1,43 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"properties": {
+	  "line_id": {
+		"type": "integer"
+	  },
+	  "line_name": {
+		"type": "string"
+	  },
+	  "line_family": {
+		"type": "object",
+		"properties": {
+		  "line_family_id": {
+			"type": "integer"
+		  },
+		  "line_family_name": {
+			"type": "string"
+		  },
+		  "line_family_name_short": {
+			"type": "string"
+		  }
+		},
+		"required": ["line_family_id", "line_family_name"]
+	  },
+	  "line_decadal_status": {
+		"type": "object",
+		"properties": {
+		  "line_decadal_status_id": {
+			"type": "integer"
+		  },
+		  "line_decadal_status_name": {
+			"type": "string"
+		  },
+		  "line_decadal_status_description": {
+			"type": "string"
+		  }
+		},
+		"required": ["line_decadal_status_id", "line_decadal_status_name"]
+	  }
+	},
+	"required": ["line_id", "line_name"]
+  }

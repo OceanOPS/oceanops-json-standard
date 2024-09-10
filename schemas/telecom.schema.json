@@ -1,0 +1,101 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"properties": {
+	  "telecom_type": {
+		"type": "object",
+		"properties": {
+		  "telecom_type_id": {
+			"type": "integer"
+		  },
+		  "telecom_type_name": {
+			"type": "string"
+		  },
+		  "telecom_type_description": {
+			"type": "string"
+		  }
+		},
+		"required": ["telecom_type_id", "telecom_type_name"]
+	  },
+	  "telecom_service": {
+		"type": "object",
+		"properties": {
+		  "telecom_service_id": {
+			"type": "integer"
+		  },
+		  "telecom_service_name": {
+			"type": "string"
+		  },
+		  "telecom_service_description": {
+			"type": "string"
+		  }
+		},
+		"required": ["telecom_service_id", "telecom_service_name"]
+	  },
+	  "telecom_format": {
+		"type": "object",
+		"properties": {
+		  "telecom_format_id": {
+			"type": "integer"
+		  },
+		  "telecom_format_name": {
+			"type": "string"
+		  },
+		  "telecom_format_description": {
+			"type": "string"
+		  }
+		},
+		"required": ["telecom_format_id", "telecom_format_name"]
+	  },
+	  "telecom_number": {
+		"type": "string"
+	  },
+	  "telecom_imei": {
+		"type": "string",
+		"pattern": "^[0-9]{15}$"
+	  },
+	  "telecom_latency": {
+		"type": "object",
+		"properties": {
+		  "latency_id": {
+			"type": "integer"
+		  },
+		  "latency_name": {
+			"type": "string"
+		  },
+		  "latency_name_short": {
+			"type": "string"
+		  },
+		  "latency_minutes": {
+			"type": "integer"
+		  }
+		},
+		"required": ["latency_id", "latency_name"]
+	  },
+	  "telecom_tracking_system": {
+		"type": "object",
+		"properties": {
+		  "tracking_system_id": {
+			"type": "integer"
+		  },
+		  "tracking_system_name": {
+			"type": "string"
+		  },
+		  "tracking_system_name_short": {
+			"type": "string"
+		  },
+		  "tracking_system_wigos_code": {
+			"type": "string"
+		  }
+		},
+		"required": ["tracking_system_id", "tracking_system_name"]
+	  },
+	  "telecom_is_backup": {
+		"type": "boolean"
+	  }
+	},
+	"required": [
+	  "telecom_type",
+	  "telecom_number"
+	]
+  }

@@ -1,0 +1,77 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"properties": {
+	  "ship_country": {
+		"$ref": "#/definitions/country"
+	  },
+	  "ship_breadth": {
+		"type": "number"
+	  },
+	  "ship_length": {
+		"type": "number"
+	  },
+	  "ship_type_name": {
+		"type": "string"
+	  },
+	  "ship_contacts_sea_email_1": {
+		"type": "string",
+		"format": "email"
+	  },
+	  "ship_imo": {
+		"type": "string",
+		"pattern": "^[0-9]{7}$"
+	  },
+	  "ship_call_sign": {
+		"type": "string"
+	  },
+	  "ship_commissioned_date": {
+		"type": "string",
+		"format": "date"
+	  },
+	  "ship_contact_shore_email_1": {
+		"type": "string",
+		"format": "email"
+	  },
+	  "ship_contact_sea_email_3": {
+		"type": "string",
+		"format": "email"
+	  },
+	  "ship_ref": {
+		"type": "string"
+	  },
+	  "ship_contact_sea_email_2": {
+		"type": "string",
+		"format": "email"
+	  },
+	  "ship_draft": {
+		"type": "number"
+	  },
+	  "ship_name": {
+		"type": "string"
+	  },
+	  "ship_type_id": {
+		"type": "integer"
+	  },
+	  "ship_id": {
+		"type": "integer"
+	  },
+	  "ship_contact_shore_email_3": {
+		"type": "string",
+		"format": "email"
+	  },
+	  "ship_contact_shore_email_2": {
+		"type": "string",
+		"format": "email"
+	  }
+	},
+	"required": [
+	  "ship_country",
+	  "ship_type_name",
+	  "ship_name",
+	  "ship_id"
+	],
+	"definitions": {
+	  "country": { "$ref": "country.schema.json" }
+	}
+  }

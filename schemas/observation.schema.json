@@ -1,0 +1,90 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"properties": {
+	  "observation_date": {
+		"type": "string",
+		"format": "date-time"
+	  },
+	  "observation_latitude": {
+		"type": "number"
+	  },
+	  "observation_longitude": {
+		"type": "number"
+	  },
+	  "observation_cycle_number": {
+		"type": "integer"
+	  },
+	  "observation_data_status": {
+		"type": "object",
+		"properties": {
+		  "data_status_id": {
+			"type": "integer"
+		  },
+		  "data_status_name": {
+			"type": "string"
+		  }
+		},
+		"required": ["data_status_id", "data_status_name"]
+	  },
+	  "observation_data_assembly_center": {
+		"type": "object",
+		"properties": {
+		  "dac_id": {
+			"type": "integer"
+		  },
+		  "dac_name": {
+			"type": "string"
+		  },
+		  "dac_name_short": {
+			"type": "string"
+		  }
+		},
+		"required": ["dac_id", "dac_name"]
+	  },
+	  "observation_data_file": {
+		"type": "string"
+	  },
+	  "observation_variables": {
+		"type": "array",
+		"items": {
+		  "type": "object",
+		  "properties": {
+			"variable_id": {
+			  "type": "integer"
+			},
+			"variable_name": {
+			  "type": "string"
+			},
+			"variable_name_short": {
+			  "type": "string"
+			},
+			"variable_description": {
+			  "type": "string"
+			},
+			"variable_wigos_code": {
+			  "type": "string"
+			},
+			"variable_argo_ref": {
+			  "type": "string"
+			},
+			"qc": {
+			  "type": "string"
+			},
+			"levels_nb": {
+			  "type": "integer"
+			}
+		  },
+		  "required": [
+			"variable_id",
+			"variable_name"
+		  ]
+		}
+	  }
+	},
+	"required": [
+	  "observation_date",
+	  "observation_latitude",
+	  "observation_longitude"
+	]
+  }

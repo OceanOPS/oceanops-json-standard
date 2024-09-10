@@ -1,0 +1,587 @@
+{
+	"platform_id": 202343687,
+	"platform_ref": "2955YIU",
+	"platform_program": {
+		"program_id": 5690,
+		"program_name": "Argo INDIA",
+		"program_description": "FY starts Apr 1 _ funded by Dept. of Ocean Development; implemented by National Center for Ocean Information Services (lead)",
+		"program_country": {
+			"country_code3": "IND",
+			"country_code2": "IN",
+			"country_name": "India",
+			"country_id": 182
+		},
+		"program_name_short": "Argo_INDIA",
+		"program_wigos_code": "argoIndia",
+		"program_network": {
+			"network_id": 1000620,
+			"network_name": "Argo",
+			"network_name_short": "Argo",
+			"network_description": "Argo (GOOS/JCOMM)",
+			"network_rank": 0,
+			"network_wigos_code": "argo"
+		}
+	},
+	"platform_project": "",
+	"platform_site": {
+		"site_id": 64,
+		"site_name": "IMOS-POLYNYA",
+		"site_description": "Polynya Array"
+	},
+	"platform_name": "",
+	"platform_parent_ref": "",
+	"platform_activity_criterion": 30,
+	"platform_closure_criterion": 90,
+	"platform_class_categories": [],
+	"platform_area": [],
+	"platform_services": [],
+	"platform_networks": [],
+	"platform_sub_networks": [],
+	"platform_all_networks": [{
+		"network_id": 1000420,
+		"network_name": "Argo Core",
+		"network_name_short": "ARGO_CORE",
+		"network_description": "core T/S float funded under a regular national Argo program (without BGC sensors, not deep)",
+		"network_rank": 1,
+		"network_wigos_code": null,
+		"parent_network": {
+			"network_id": 1000620,
+			"network_name": "Argo",
+			"network_name_short": "Argo",
+			"network_description": "Argo (GOOS/JCOMM)",
+			"network_rank": 0,
+			"network_wigos_code": "argo"
+		}
+	}],
+	"platform_model": {
+		"platform_model_id": 1208,
+		"platform_model_name": "PAWS",
+		"platform_model_name_short": "PAWS",
+		"platform_model_description": "The MetOcean Polar Area Weather Station (PAWS) is a compact, rugged, and easy-to-use polar platform that provides quality-controlled data in harsh weather conditions.",
+		"platform_model_total_height": 115.0,
+		"platform_model_weight": 140,
+		"platform_model_type": {
+			"platform_type_id": 1000,
+			"platform_type_name": "Float Deep",
+			"platform_type_name_short": "FLOAT_DEEP",
+			"platform_type_description": "Profiling float that is capable of profiling deeper than 2000dbar ",
+			"platform_type_wigos_code": "underwaterMobile",
+			"platform_family": {
+				"platform_family_id": 2,
+				"platform_family_name": "Subsurface Profiler",
+				"platform_family_name_short": "SUB_P",
+				"platform_family_description": "Subsurface profilers"
+			}
+		}
+	},
+	"platform_owner": {},
+	"platform_service_schedule": {},
+	"platform_principal_investigator": {},
+	"platform_operating_agency": {},
+	"platform_dac": {},
+	"platform_end_date": "",
+	"platform_deployment": {
+		"deployment_method": {
+			"method_id": 2,
+			"method_name": "THROW_OVER",
+			"method_description": "Instrument is manually thrown over into the water"
+		},
+		"deployment_country": {
+			"country_code3": "DEU",
+			"country_code2": "DE",
+			"country_name": "Germany",
+			"country_id": 164
+		},
+		"deployment_latitude": null,
+		"deployment_longitude": null,
+		"deployment_height": null,
+		"deployment_date": "",
+		"deployment_ship": {
+            "ship_country": {
+                "country_code3": "DEU",
+                "country_code2": "DE",
+                "country_name": "Germany",
+                "country_id": 164
+            },
+            "ship_breadth": 20.6,
+            "ship_length": 116,
+            "ship_type_name": "Research Vessels",
+            "ship_contacts_sea_email_1": "",
+            "ship_imo": "9633927",
+            "ship_call_sign": "DBBE",
+            "ship_commissioned_date": "2014-08-11",
+            "ship_contact_shore_email_1": "",
+            "ship_contact_sea_email_3": "",
+            "ship_ref": "06SN",
+            "ship_contact_sea_email_2": "",
+            "ship_draft": 6.5,
+            "ship_name": "SONNE",
+            "ship_type_id": 42,
+            "ship_id": 1005245,
+            "ship_contact_shore_email_3": "",
+            "ship_contact_shore_email_2": ""
+        },
+		"deployment_cruise": {},
+		"ref_station_id": "",
+		"no_site": false,
+		"max_mooring_depth": null,
+		"deployment_operator": {}
+	},
+	"platform_retrieval": {
+		"retrieval_status": {
+			"status_id": 2,
+			"status_name": "Recovered",
+			"status_name_short": "RECOVERED"
+		},
+		"post_retrieval_status": {},
+		"retrieval_latitude": null,
+		"retrieval_longitude": null,
+		"retrieval_start_date": "",
+		"retrieval_end_date": "",
+		"retrieval_country": {
+			"country_code3": "DEU",
+			"country_code2": "DE",
+			"country_name": "Germany",
+			"country_id": 164
+		},
+		"platform_ending_cause": {
+			"ending_cause_id": 2,
+			"ending_cause_name": "Beached platform",
+			"ending_cause_name_short": "BEACHED",
+			"ending_cause_argo_ref": "beached",
+			"ending_cause_description": "The platform beached at the coastline"
+		},
+		"retrieval_ship": {
+            "ship_country": {
+                "country_code3": "DEU",
+                "country_code2": "DE",
+                "country_name": "Germany",
+                "country_id": 164
+            },
+            "ship_breadth": 20.6,
+            "ship_length": 116,
+            "ship_type_name": "Research Vessels",
+            "ship_contacts_sea_email": "",
+            "ship_imo": "9633927",
+            "ship_call_sign": "DBBE",
+            "ship_commissioned_date": "2014-08-11",
+            "ship_contact_shore_email_1": "",
+            "ship_contact_sea_email_3": "",
+            "ship_ref": "06SN",
+            "ship_contact_sea_email_2": "",
+            "ship_draft": 6.5,
+            "ship_name": "SONNE",
+            "ship_type_id": 42,
+            "ship_id": 1005245,
+            "ship_contact_shore_email_3": "",
+            "ship_contact_shore_email_2": ""
+        },
+		"retrieval_cruise": {
+			"cruise_id": null,
+			"cruise_name": "",
+			"cruise_ref": "",
+			"cruise_iioe2_id": "",
+			"cruise_mfp_id": "",
+			"cruise_csr_id": "",
+			"cruise_project_name": "",
+			"cruise_start_date": "",
+			"cruise_end_date": "",
+			"cruise_arrival_port": {
+				"port_country_code": "CU",
+				"port_code": "CMW",
+				"port_code_full": "CUCMW",
+				"port_code_name": "Camagüey",
+				"port_code_name_simple": "Camaguey"
+			},
+			"cruise_departure_port": {
+				"port_country_code": "AU",
+				"port_code": "SKA",
+				"port_code_full": "AUSKA",
+				"port_code_name": "Skardon River",
+				"port_code_name_simple": "Skardon River"
+			},
+			"cruise_ship": {},
+			"cruise_status": {
+				"cruise_status_id": 25,
+				"cruise_status_name": "Data Submitted",
+				"cruise_status_description": "Delayed-Mode Data Submitted"
+			},
+			"cruise_lead_program": {},
+			"cruise_type": {
+				"cruise_type_id": 2,
+				"cruise_type_name": "Civil Society",
+				"cruise_type_name_short": "CIVIL_SOC"
+			},
+			"parent_cruise": {},
+			"cruise_class": {
+				"cruise_class_id": 1,
+				"cruise_class_name": "GO-SHIP reference"
+			},
+			"cruise_other_programs": [],
+			"cruise_contacts": [],
+			"cruise_lines": [{
+				"line_id": 1000132,
+				"line_name": "I06S",
+				"line_family": {
+					"line_family_id": 1,
+					"line_family_name": "GO-SHIP Line",
+					"line_family_name_short": "GOSHIP_LINE"
+				},
+				"line_decadal_status": {
+					"line_decadal_status_id": 5,
+					"line_decadal_status_name": "Alarm",
+					"line_decadal_status_description": "No cruise completed on line for more than 7 years, AND no cruise(s) [at sea or funded or planned] on line in next 4 years"
+				}
+			}],
+			"cruise_countries": [],
+			"cruise_sensor_models": [],
+			"cruise_description": "",
+			"cruise_performance_comment": "",
+			"cruise_route_flexible": false,
+			"cruise_route_pending": false,
+			"cruise_route_private": false,
+			"cruise_dates_pending": false,
+			"cruise_ship_stop": false,
+			"cruise_embark_capacity": null,
+			"cruise_storage_capacity": null,
+			"cruise_cost_unit": null,
+			"cruise_cost_month": null
+		},
+		"retrieval_local_contact_info": "",
+		"retrieval_description": "",
+		"retrieval_ref_station_id": ""
+	},
+	"platform_ancillary_device": {
+		"device_model": {},
+		"device_version": {},
+		"device_serial_number": ""
+	},
+	"platform_identifiers": {
+		"platform_wmo_id": "",
+		"platform_serial_number": "",
+		"platform_internal_id": "",
+		"platform_wigos_id": ""
+	},
+	"platform_telecoms": [{
+			"telecom_type": {
+				"telecom_type_id": 1000010,
+				"telecom_type_name": "GLOBALSTAR",
+				"telecom_type_description": "Globalstar communication system"
+			},
+			"telecom_service": {
+				"telecom_service_id": 65,
+				"telecom_service_name": "TURBOWIN",
+				"telecom_service_description": "TurboWin Obs2Server"
+			},
+			"telecom_format": {
+				"telecom_format_id": 1000005,
+				"telecom_format_name": "TAC",
+				"telecom_format_description": "Traditional Alphanumeric Code not leisted below"
+			},
+			"telecom_number": "6876672",
+			"telecom_imei": "765765726576562",
+			"telecom_latency": {
+				"latency_id": 2,
+				"latency_name": "NRT",
+				"latency_name_short": "Near real-Time (< 20min)",
+				"latency_minutes": 20
+			},
+			"telecom_tracking_system": {
+				"tracking_system_id": 0,
+				"tracking_system_name": "ARGOS DOPPLER",
+				"tracking_system_name_short": "ARGOS",
+				"tracking_system_wigos_code": "argosDoppler"
+			},
+			"telecom_is_backup": false
+		},
+		{
+			"telecom_type": {
+				"telecom_type_id": 1000060,
+				"telecom_type_name": "CELLULAR",
+				"telecom_type_description": "communication using terrestrial wireless networks (GSM, GPRS)"
+			},
+			"telecom_service": {
+				"telecom_service_id": 75,
+				"telecom_service_name": "INMARSAT_OTHER",
+				"telecom_service_description": "Inmarsat other special access code"
+			},
+			"telecom_format": {
+				"telecom_format_id": 1000006,
+				"telecom_format_name": "#100",
+				"telecom_format_description": "Binary data format developped by E-Surfmar for AWS"
+			},
+			"telecom_number": "376837333",
+			"telecom_imei": "228029802980928",
+			"telecom_latency": {},
+			"telecom_tracking_system": {
+				"tracking_system_id": 2,
+				"tracking_system_name": "GPS",
+				"tracking_system_name_short": "GPS",
+				"tracking_system_wigos_code": "gps"
+			},
+			"telecom_is_backup": true
+		}
+	],
+	"platform_sensors": [
+		{
+			"sensor_id": null,
+			"sensor_name": "",
+			"sensor_name_short": "",
+			"sensor_link_url": "",
+			"sensor_image_url": "",
+			"sensor_bodc_id": "",
+			"sensor_description": "",
+			"sensor_yearly_drift": null,
+			"sensor_axes_amount": null,
+			"sensor_agency": {},
+			"sensor_networks": [],
+			"sensor_types": [{
+				"sensor_type_id": 338,
+				"sensor_type_name": "TRANSISTOR_PH",
+				"sensor_type_name_short": "TRANSISTOR_PH",
+				"sensor_type_description": "Transistor pH Sensor",
+				"sensor_type_variable": {
+					"variable_id": 4191,
+					"variable_name": "pH",
+					"variable_description": "The hydrogen ion concentration in seawater, which is a measure of acidity and alkalinity."
+				}
+			}]
+		}
+	],
+	"platform_description": "Co-deployed with logging radiation",
+	"platform_ptf_software": {
+		"type": {},
+		"name": "",
+		"version": ""
+	},
+	"platform_software": {
+		"name": "",
+		"version": "",
+		"format": ""
+	},
+	"platform_firmware": {
+		"name": "",
+		"serial_ref": "",
+		"bluetooth_id": ""
+	},
+	"platform_hardware": {
+		"battery": {
+			"battery_id": 3,
+			"battery_name": "Alkaline 15V",
+			"battery_description": "Alkaline",
+			"battery_ini_voltage": 15
+		},
+		"batteryPack": "",
+		"controlBoard": "",
+		"control_board_serial_number": "",
+		"manuf_date": "",
+		"batch_ref": "",
+		"has_drogue": false,
+		"special_feature": ""
+	},
+	"platform_configuration": {
+		"cycle_time": "",
+		"surface_time": "",
+		"drift_pressure": "",
+		"profile_pressure": "",
+		"automation_level": {},
+		"observation_schedule": {},
+		"inspection_interval": "",
+		"has_ice_detection_software": false
+	},
+	"platform_data": {
+		"data_url": "",
+		"data_rtqc_method": {}
+	},
+	"platform_weblinks": [],
+	"platform_agencies": [
+		{
+			"agency_role": {
+				"role_id": 2,
+				"role_name": "Global Data assembly center"
+			},
+			"agency_name": "Institut Francais de Recherche et d'Exploitation de la Mer",
+			"agency_id": 4,
+			"agency_country": {
+                "country_code3": "FRA",
+                "country_code2": "FR",
+                "country_name": "France",
+                "country_id": 23
+			},
+			"agency_edmo_code": "",
+			"agency_grid_id": "",
+			"agency_email": "",
+			"agency_short_name": "",
+			"agency_description": "",
+			"agency_latitude": "",
+			"agency_longitude": "",
+			"agency_url": "",
+			"agency_phone": "",
+			"agency_address": "",
+			"agency_fax": "",
+			"agency_is_manufacturer": true,
+			"agency_is_purchaser": false,
+			"agency_is_deployer": true,
+			"agency_is_pogo_member": false
+
+		},
+		{
+			"agency_role": {
+				"role_id": 4,
+				"role_name": "Data assembly center"
+			},
+			"agency_name": "British Oceanographic Data Centre",
+			"agency_id": 5973,
+			"agency_country": {
+                "country_code3": "UKI",
+                "country_code2": "UK",
+                "country_name": "United Kingdom",
+                "country_id": 92
+			},
+			"agency_edmo_code": "",
+			"agency_grid_id": "",
+			"agency_email": "",
+			"agency_short_name": "",
+			"agency_description": "",
+			"agency_latitude": "",
+			"agency_longitude": "",
+			"agency_url": "",
+			"agency_phone": "",
+			"agency_address": "",
+			"agency_fax": "",
+			"agency_is_manufacturer": true,
+			"agency_is_purchaser": false,
+			"agency_is_deployer": true,
+			"agency_is_pogo_member": false
+		}
+	],
+	"platform_statuses": [
+		{
+			"status_id": 2,
+			"status_name": "REGISTERED",
+			"status_date": "2017-12-26"
+		},
+		{
+			"status_id": 6,
+			"status_name": "OPERATIONAL",
+			"status_date": "2018-01-18"
+		},
+		{
+			"status_id": 4,
+			"status_name": "INACTIVE",
+			"status_date": "2024-02-20"
+		},
+		{
+			"status_id": 6,
+			"status_name": "OPERATIONAL",
+			"status_date": "2024-04-16"
+		}
+	],
+	"platform_sites": [],
+	"platform_latest_status": {
+		"status_id": 6,
+		"status_name": "OPERATIONAL",
+		"status_date": "2024-04-16"
+	},
+	"platform_contributors": [
+		{
+			"contact_role": {
+				"role_id": 4,
+				"role_name": "Delayed-Mode Operator"
+			},
+			"contact_name": "Cecile Cabanes",
+			"contact_id": 1003942, 
+			"contact_country": {
+
+			},
+			"contact_agencies": []
+		},
+		{
+			"contact_role": {
+				"role_id": 4,
+				"role_name": "Delayed-Mode Operator"
+			},
+			"contact_name": "Romain CANCOUËT",
+			"contact_id": 1003786, 
+			"contact_country": {
+
+			},
+			"contact_agencies": []
+		}
+	],
+	"platform_observations": [
+		{
+			"observation_date": "2024-08-30T00:32:30",
+			"observation_latitude": 21.309,
+			"observation_longitude": -28.824,
+			"observation_cycle_number": 88,
+			"observation_data_status": {
+				"data_status_id": 2,
+				"data_status_name": "DELAYED MODE"
+			},
+			"observation_data_assembly_center": {
+				"dac_id": 30,
+				"dac_name": "NOAA / Atlantic Oceanographic and Meteorological Laboratory",
+				"dac_name_short": "NOAA/AOML"
+			},
+			"observation_data_file": "aoml/3901242/profiles/D3901242_088.nc",
+			"observation_variables": [{
+				"variable_id": 33,
+				"variable_name": "Oxygen, dissolved",
+				"variable_name_short": "DOXY",
+				"variable_description": "",
+				"variable_wigos_code": "http://codes.wmo.int/wmdr/ObservedVariableOcean/87",
+				"variable_argo_ref": "DOXY",
+				"qc": "F",
+				"levels_nb": 1007
+			},{
+				"variable_id": 968,
+				"variable_name": "Atmospheric pressure",
+				"variable_name_short": "ATMPRESS",
+				"variable_description": "",
+				"variable_wigos_code": "http://codes.wmo.int/wmdr/ObservedVariableAtmosphere/216",
+				"variable_argo_ref": "ATMPRESS",
+				"qc": "A",
+				"levels_nb": 1007
+			}]
+		},
+		{
+			"observation_date": "2023-04-30T01:22:20",
+			"observation_latitude": 24.034,
+			"observation_longitude": -35.334,
+			"observation_cycle_number": 88,
+			"observation_data_status": {
+				"data_status_id": 2,
+				"data_status_name": "DELAYED MODE"
+			},
+			"observation_data_assembly_center": {
+				"dac_id": 30,
+				"dac_name": "NOAA / Atlantic Oceanographic and Meteorological Laboratory",
+				"dac_name_short": "NOAA/AOML"
+			},
+			"observation_data_file": "aoml/3901242/profiles/D3901242_088.nc",
+			"observation_variables": [{
+				"variable_id": 33,
+				"variable_name": "Oxygen, dissolved",
+				"variable_name_short": "DOXY",
+				"variable_description": "",
+				"variable_wigos_code": "http://codes.wmo.int/wmdr/ObservedVariableOcean/87",
+				"variable_argo_ref": "DOXY",
+				"qc": "F",
+				"levels_nb": 1007
+			}]
+		}
+	],
+	"platform_locations": [
+		{
+			"location_date": "2024-08-30T00:32:30",
+			"location_latitude": 21.309,
+			"location_longitude": -28.824
+		},
+		{
+			"location_date": "2023-04-30T01:22:20",
+			"location_latitude": 24.034,
+			"location_longitude": -35.334
+		}
+	]
+}

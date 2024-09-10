@@ -1,0 +1,99 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"properties": {
+	  "sensor_id": {
+		"type": ["integer", "null"],
+		"description": "Unique identifier for the sensor"
+	  },
+	  "sensor_name": {
+		"type": "string",
+		"description": "Full name of the sensor"
+	  },
+	  "sensor_name_short": {
+		"type": "string",
+		"description": "Short name or abbreviation of the sensor"
+	  },
+	  "sensor_link_url": {
+		"type": "string",
+		"format": "uri",
+		"description": "URL link related to the sensor"
+	  },
+	  "sensor_image_url": {
+		"type": "string",
+		"format": "uri",
+		"description": "URL of an image of the sensor"
+	  },
+	  "sensor_bodc_id": {
+		"type": "string",
+		"description": "British Oceanographic Data Centre (BODC) identifier for the sensor"
+	  },
+	  "sensor_description": {
+		"type": "string",
+		"description": "Detailed description of the sensor"
+	  },
+	  "sensor_yearly_drift": {
+		"type": ["number", "null"],
+		"description": "Annual drift of the sensor measurements"
+	  },
+	  "sensor_axes_amount": {
+		"type": ["integer", "null"],
+		"description": "Number of axes the sensor measures"
+	  },
+	  "sensor_agency": {
+		"type": "object",
+		"description": "Agency associated with the sensor"
+	  },
+	  "sensor_networks": {
+		"type": "array",
+		"description": "Networks the sensor is part of"
+	  },
+	  "sensor_types": {
+		"type": "array",
+		"items": {
+		  "type": "object",
+		  "properties": {
+			"sensor_type_id": {
+			  "type": "integer",
+			  "description": "Unique identifier for the sensor type"
+			},
+			"sensor_type_name": {
+			  "type": "string",
+			  "description": "Full name of the sensor type"
+			},
+			"sensor_type_name_short": {
+			  "type": "string",
+			  "description": "Short name or abbreviation of the sensor type"
+			},
+			"sensor_type_description": {
+			  "type": "string",
+			  "description": "Detailed description of the sensor type"
+			},
+			"sensor_type_variable": {
+			  "type": "object",
+			  "properties": {
+				"variable_id": {
+				  "type": "integer",
+				  "description": "Unique identifier for the variable measured"
+				},
+				"variable_name": {
+				  "type": "string",
+				  "description": "Name of the variable measured"
+				},
+				"variable_description": {
+				  "type": "string",
+				  "description": "Detailed description of the variable measured"
+				}
+			  },
+			  "required": ["variable_id", "variable_name"],
+			  "additionalProperties": false
+			}
+		  },
+		  "required": ["sensor_type_id", "sensor_type_name", "sensor_type_variable"],
+		  "additionalProperties": false
+		}
+	  }
+	},
+	"required": ["sensor_id", "sensor_name", "sensor_types"],
+	"additionalProperties": false
+  }

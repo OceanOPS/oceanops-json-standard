@@ -1,0 +1,82 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"properties": {
+	  "platform_model_id": {
+		"type": "integer",
+		"description": "Unique identifier for the platform model"
+	  },
+	  "platform_model_name": {
+		"type": "string",
+		"description": "Full name of the platform model"
+	  },
+	  "platform_model_name_short": {
+		"type": "string",
+		"description": "Short name or abbreviation of the platform model"
+	  },
+	  "platform_model_description": {
+		"type": "string",
+		"description": "Detailed description of the platform model"
+	  },
+	  "platform_model_total_height": {
+		"type": "number",
+		"description": "Total height of the platform model in centimeters"
+	  },
+	  "platform_model_weight": {
+		"type": "integer",
+		"description": "Weight of the platform model in kilograms"
+	  },
+	  "platform_model_type": {
+		"type": "object",
+		"properties": {
+		  "platform_type_id": {
+			"type": "integer",
+			"description": "Unique identifier for the platform type"
+		  },
+		  "platform_type_name": {
+			"type": "string",
+			"description": "Full name of the platform type"
+		  },
+		  "platform_type_name_short": {
+			"type": "string",
+			"description": "Short name or abbreviation of the platform type"
+		  },
+		  "platform_type_description": {
+			"type": "string",
+			"description": "Detailed description of the platform type"
+		  },
+		  "platform_type_wigos_code": {
+			"type": "string",
+			"description": "WIGOS code for the platform type"
+		  },
+		  "platform_family": {
+			"type": "object",
+			"properties": {
+			  "platform_family_id": {
+				"type": "integer",
+				"description": "Unique identifier for the platform family"
+			  },
+			  "platform_family_name": {
+				"type": "string",
+				"description": "Full name of the platform family"
+			  },
+			  "platform_family_name_short": {
+				"type": "string",
+				"description": "Short name or abbreviation of the platform family"
+			  },
+			  "platform_family_description": {
+				"type": "string",
+				"description": "Detailed description of the platform family"
+			  }
+			},
+			"required": ["platform_family_id", "platform_family_name"],
+			"additionalProperties": false
+		  }
+		},
+		"required": ["platform_type_id", "platform_type_name", "platform_family"],
+		"additionalProperties": false
+	  }
+	},
+	"required": ["platform_model_id", "platform_model_name", "platform_model_type"],
+	"additionalProperties": false
+}
