@@ -32,20 +32,20 @@ The key characteristics of this naming convention are:
 
 ## Property Key Naming Standard 
 
-In most cases, the name of the entity is included at the beginning of the property key, but not any parent entities.
+In almost all cases, we avoid prefixing the name of the entity in the property key.
 
-For instance here, we name the property key 'deployment_country'  -  not 'country' or 'platform_deployment_country'
+For instance here, we name the property key 'country'  -  not 'deployment_country' or 'platform_deployment_country'
 
-And we name the property key 'country_name'  -  not 'name' or 'platform_deployment_country_name'
+And we name the property key 'name'  -  not 'country_name' or 'platform_deployment_country_name'
 
 ```json
-"platform_deployment": {
-    "deployment_method": {},
-    "deployment_country": {
-        "country_code3": "DEU",
-        "country_code2": "DE",
-        "country_name": "Germany",
-        "country_id": 164
+"deployment": {
+    "method": {},
+    "country": {
+        "code3": "DEU",
+        "code2": "DE",
+        "name": "Germany",
+        "id": 164
     }
 }
 ```

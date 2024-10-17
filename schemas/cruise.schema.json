@@ -2,153 +2,153 @@
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"type": "object",
 	"properties": {
-	  "cruise_id": {
+	  "id": {
 		"type": ["integer", "null"]
 	  },
-	  "cruise_name": {
+	  "name": {
 		"type": "string"
 	  },
-	  "cruise_ref": {
+	  "ref": {
 		"type": "string"
 	  },
-	  "cruise_iioe2_id": {
+	  "iioe2_id": {
 		"type": "string"
 	  },
-	  "cruise_mfp_id": {
+	  "mfp_id": {
 		"type": "string"
 	  },
-	  "cruise_csr_id": {
+	  "csr_id": {
 		"type": "string"
 	  },
-	  "cruise_project_name": {
+	  "project_name": {
 		"type": "string"
 	  },
-	  "cruise_start_date": {
+	  "start_date": {
 		"type": "string",
 		"format": "date"
 	  },
-	  "cruise_end_date": {
+	  "end_date": {
 		"type": "string",
 		"format": "date"
 	  },
-	  "cruise_arrival_port": {
+	  "arrival_port": {
 		"$ref": "#/definitions/port"
 	  },
-	  "cruise_departure_port": {
+	  "departure_port": {
 		"$ref": "#/definitions/port"
 	  },
-	  "cruise_ship": {
+	  "ship": {
 		"$ref": "#/definitions/ship"
 	  },
-	  "cruise_status": {
+	  "status": {
 		"type": "object",
 		"properties": {
-		  "cruise_status_id": {
+		  "id": {
 			"type": "integer"
 		  },
-		  "cruise_status_name": {
+		  "name": {
 			"type": "string"
 		  },
-		  "cruise_status_description": {
+		  "description": {
 			"type": "string"
 		  }
 		},
-		"required": ["cruise_status_id", "cruise_status_name"]
+		"required": ["id", "name"]
 	  },
-	  "cruise_lead_program": {
+	  "lead_program": {
 		"type": "object"
 	  },
-	  "cruise_type": {
+	  "type": {
 		"type": "object",
 		"properties": {
-		  "cruise_type_id": {
+		  "id": {
 			"type": "integer"
 		  },
-		  "cruise_type_name": {
+		  "name": {
 			"type": "string"
 		  },
-		  "cruise_type_name_short": {
+		  "name_short": {
 			"type": "string"
 		  }
 		},
-		"required": ["cruise_type_id", "cruise_type_name"]
+		"required": ["id", "name"]
 	  },
 	  "parent_cruise": {
 		"type": "object"
 	  },
-	  "cruise_class": {
+	  "class": {
 		"type": "object",
 		"properties": {
-		  "cruise_class_id": {
+		  "id": {
 			"type": "integer"
 		  },
-		  "cruise_class_name": {
+		  "name": {
 			"type": "string"
 		  }
 		},
-		"required": ["cruise_class_id", "cruise_class_name"]
+		"required": ["id", "name"]
 	  },
-	  "cruise_other_programs": {
+	  "other_programs": {
 		"type": "array",
 		"items": {
 		  "type": "object"
 		}
 	  },
-	  "cruise_contacts": {
+	  "contacts": {
 		"type": "array",
 		"items": {
 		  "$ref": "#/definitions/contact"
 		}
 	  },
-	  "cruise_lines": {
+	  "lines": {
 		"type": "array",
 		"items": {
 		  "$ref": "#/definitions/line"
 		}
 	  },
-	  "cruise_countries": {
+	  "countries": {
 		"type": "array",
 		"items": {
 		  "$ref": "#/definitions/country"
 		}
 	  },
-	  "cruise_sensor_models": {
+	  "sensor_models": {
 		"type": "array",
 		"items": {
 		  "type": "object"
 		}
 	  },
-	  "cruise_description": {
+	  "description": {
 		"type": "string"
 	  },
-	  "cruise_performance_comment": {
+	  "performance_comment": {
 		"type": "string"
 	  },
-	  "cruise_route_flexible": {
+	  "route_flexible": {
 		"type": "boolean"
 	  },
-	  "cruise_route_pending": {
+	  "route_pending": {
 		"type": "boolean"
 	  },
-	  "cruise_route_private": {
+	  "route_private": {
 		"type": "boolean"
 	  },
-	  "cruise_dates_pending": {
+	  "dates_pending": {
 		"type": "boolean"
 	  },
-	  "cruise_ship_stop": {
+	  "ship_stop": {
 		"type": "boolean"
 	  },
-	  "cruise_embark_capacity": {
+	  "embark_capacity": {
 		"type": ["integer", "null"]
 	  },
-	  "cruise_storage_capacity": {
+	  "storage_capacity": {
 		"type": ["integer", "null"]
 	  },
-	  "cruise_cost_unit": {
+	  "cost_unit": {
 		"type": ["number", "null"]
 	  },
-	  "cruise_cost_month": {
+	  "cost_month": {
 		"type": ["number", "null"]
 	  }
 	},

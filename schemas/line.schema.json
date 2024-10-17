@@ -2,42 +2,42 @@
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"type": "object",
 	"properties": {
-	  "line_id": {
+	  "id": {
 		"type": "integer"
 	  },
-	  "line_name": {
+	  "name": {
 		"type": "string"
 	  },
-	  "line_family": {
+	  "family": {
 		"type": "object",
 		"properties": {
-		  "line_family_id": {
+		  "id": {
 			"type": "integer"
 		  },
-		  "line_family_name": {
+		  "name": {
 			"type": "string"
 		  },
-		  "line_family_name_short": {
+		  "name_short": {
 			"type": "string"
 		  }
 		},
-		"required": ["line_family_id", "line_family_name"]
+		"required": ["id", "name"]
 	  },
-	  "line_decadal_status": {
+	  "decadal_status": {
 		"type": "object",
 		"properties": {
-		  "line_decadal_status_id": {
+		  "id": {
 			"type": "integer"
 		  },
-		  "line_decadal_status_name": {
+		  "name": {
 			"type": "string"
 		  },
-		  "line_decadal_status_description": {
+		  "description": {
 			"type": "string"
 		  }
 		},
-		"required": ["line_decadal_status_id", "line_decadal_status_name"]
+		"required": ["id", "name"]
 	  }
 	},
-	"required": ["line_id", "line_name"]
+	"required": ["id", "name"]
   }
