@@ -2,26 +2,26 @@
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"type": "object",
 	"properties": {
-	  "platform_id": {
+	  "id": {
 		"type": "integer"
 	  },
-	  "platform_ref": {
+	  "ref": {
 		"type": "string"
 	  },
-	  "platform_program": {
+	  "program": {
 		"type": "object",
 		"properties": {
-		  "program_id": { "type": "integer" },
-		  "program_name": { "type": "string" },
-		  "program_description": { "type": "string" },
-		  "program_country": { "$ref": "#/definitions/country" },
-		  "program_name_short": { "type": "string" },
-		  "program_wigos_code": { "type": "string" },
-		  "program_network": { "$ref": "#/definitions/network" }
+		  "id": { "type": "integer" },
+		  "name": { "type": "string" },
+		  "description": { "type": "string" },
+		  "country": { "$ref": "#/definitions/country" },
+		  "name_short": { "type": "string" },
+		  "wigos_code": { "type": "string" },
+		  "network": { "$ref": "#/definitions/network" }
 		}
 	  },
-	  "platform_project": { "type": "string" },
-	  "platform_site": {
+	  "project": { "type": "string" },
+	  "site": {
 		"type": "object",
 		"properties": {
 		  "site_id": { "type": "integer" },
@@ -29,110 +29,110 @@
 		  "site_description": { "type": "string" }
 		}
 	  },
-	  "platform_name": { "type": "string" },
-	  "platform_parent_ref": { "type": "string" },
-	  "platform_activity_criterion": { "type": "integer" },
-	  "platform_closure_criterion": { "type": "integer" },
-	  "platform_class_categories": { "type": "array" },
-	  "platform_area": { "type": "array" },
-	  "platform_services": { "type": "array" },
-	  "platform_networks": { 
+	  "name": { "type": "string" },
+	  "parent_ref": { "type": "string" },
+	  "activity_criterion": { "type": "integer" },
+	  "closure_criterion": { "type": "integer" },
+	  "class_categories": { "type": "array" },
+	  "area": { "type": "array" },
+	  "services": { "type": "array" },
+	  "networks": { 
 		"type": "array",
 		"items": { "$ref": "#/definitions/network" }
 		},
-	  "platform_sub_networks": { 
+	  "sub_networks": { 
 		"type": "array" ,
 		"items": { "$ref": "#/definitions/network" }
 		},
-	  "platform_all_networks": {
+	  "all_networks": {
 		"type": "array",
 		"items": { "$ref": "#/definitions/network" }
 	  },
-	  "platform_model": { "$ref": "#/definitions/platform_model" },
-	  "platform_owner": { "type": "object" },
-	  "platform_service_schedule": { "type": "object" },
-	  "platform_principal_investigator": { "type": "object" },
-	  "platform_operating_agency": { "type": "object" },
-	  "platform_dac": { "type": "object" },
+	  "model": { "$ref": "#/definitions/platform_model" },
+	  "owner": { "type": "object" },
+	  "service_schedule": { "type": "object" },
+	  "principal_investigator": { "type": "object" },
+	  "operating_agency": { "type": "object" },
+	  "dac": { "type": "object" },
 	  "platform_end_date": { "type": "string" },
-	  "platform_deployment": {
+	  "deployment": {
 		"type": "object",
 		"properties": {
-		  "deployment_method": {
+		  "method": {
 			"type": "object",
 			"properties": {
-			  "method_id": { "type": "integer" },
-			  "method_name": { "type": "string" },
-			  "method_description": { "type": "string" }
+			  "id": { "type": "integer" },
+			  "name": { "type": "string" },
+			  "description": { "type": "string" }
 			}
 		  },
-		  "deployment_country": { "$ref": "#/definitions/country" },
-		  "deployment_latitude": { "type": ["number", "null"] },
-		  "deployment_longitude": { "type": ["number", "null"] },
-		  "deployment_height": { "type": ["number", "null"] },
-		  "deployment_date": { "type": "string" },
-		  "deployment_ship": { "$ref": "#/definitions/ship" },
-		  "deployment_cruise": { "$ref": "#/definitions/cruise" },
+		  "country": { "$ref": "#/definitions/country" },
+		  "latitude": { "type": ["number", "null"] },
+		  "longitude": { "type": ["number", "null"] },
+		  "height": { "type": ["number", "null"] },
+		  "date": { "type": "string" },
+		  "ship": { "$ref": "#/definitions/ship" },
+		  "cruise": { "$ref": "#/definitions/cruise" },
 		  "ref_station_id": { "type": "string" },
 		  "no_site": { "type": "boolean" },
 		  "max_mooring_depth": { "type": ["number", "null"] },
-		  "deployment_operator": { "type": "object" }
+		  "operator": { "type": "object" }
 		}
 	  },
-	  "platform_retrieval": {
+	  "retrieval": {
 		"type": "object",
 		"properties": {
-		  "retrieval_status": { "type": "object" },
+		  "status": { "type": "object" },
 		  "post_retrieval_status": { "type": "object" },
-		  "retrieval_latitude": { "type": ["number", "null"] },
-		  "retrieval_longitude": { "type": ["number", "null"] },
-		  "retrieval_start_date": { "type": "string" },
-		  "retrieval_end_date": { "type": "string" },
-		  "retrieval_country": { "$ref": "#/definitions/country" },
+		  "latitude": { "type": ["number", "null"] },
+		  "longitude": { "type": ["number", "null"] },
+		  "start_date": { "type": "string" },
+		  "end_date": { "type": "string" },
+		  "country": { "$ref": "#/definitions/country" },
 		  "platform_ending_cause": {
 			"type": "object",
 			"properties": {
-			  "ending_cause_id": { "type": "integer" },
-			  "ending_cause_name": { "type": "string" },
-			  "ending_cause_name_short": { "type": "string" },
-			  "ending_cause_argo_ref": { "type": "string" },
-			  "ending_cause_description": { "type": "string" }
+			  "id": { "type": "integer" },
+			  "name": { "type": "string" },
+			  "name_short": { "type": "string" },
+			  "argo_ref": { "type": "string" },
+			  "description": { "type": "string" }
 			}
 		  },
-		  "retrieval_ship": { "$ref": "#/definitions/ship" },
-		  "retrieval_cruise": { "$ref": "#/definitions/cruise" },
-		  "retrieval_local_contact_info": { "type": "string" },
-		  "retrieval_description": { "type": "string" },
-		  "retrieval_ref_station_id": { "type": "string" }
+		  "ship": { "$ref": "#/definitions/ship" },
+		  "ruise": { "$ref": "#/definitions/cruise" },
+		  "local_contact_info": { "type": "string" },
+		  "description": { "type": "string" },
+		  "ref_station_id": { "type": "string" }
 		}
 	  },
-	  "platform_ancillary_device": {
+	  "ancillary_device": {
 		"type": "object",
 		"properties": {
-		  "device_model": { "type": "object" },
-		  "device_version": { "type": "object" },
-		  "device_serial_number": { "type": "string" }
+		  "model": { "type": "object" },
+		  "version": { "type": "object" },
+		  "serial_number": { "type": "string" }
 		}
 	  },
-	  "platform_identifiers": {
+	  "identifiers": {
 		"type": "object",
 		"properties": {
-		  "platform_wmo_id": { "type": "string" },
-		  "platform_serial_number": { "type": "string" },
-		  "platform_internal_id": { "type": "string" },
-		  "platform_wigos_id": { "type": "string" }
+		  "wmo_id": { "type": "string" },
+		  "serial_number": { "type": "string" },
+		  "internal_id": { "type": "string" },
+		  "wigos_id": { "type": "string" }
 		}
 	  },
-	  "platform_telecoms": {
+	  "telecoms": {
 		"type": "array",
 		"items": { "$ref": "#/definitions/telecom" }
 	  },
-	  "platform_sensors": {
+	  "sensors": {
 		"type": "array",
 		"items": { "$ref": "#/definitions/sensor" }
 	  },
 	  "platform_description": { "type": "string" },
-	  "platform_ptf_software": {
+	  "ptf_software": {
 		"type": "object",
 		"properties": {
 		  "type": { "type": "object" },
@@ -140,7 +140,7 @@
 		  "version": { "type": "string" }
 		}
 	  },
-	  "platform_software": {
+	  "software": {
 		"type": "object",
 		"properties": {
 		  "name": { "type": "string" },
@@ -148,7 +148,7 @@
 		  "format": { "type": "string" }
 		}
 	  },
-	  "platform_firmware": {
+	  "firmware": {
 		"type": "object",
 		"properties": {
 		  "name": { "type": "string" },
@@ -156,16 +156,16 @@
 		  "bluetooth_id": { "type": "string" }
 		}
 	  },
-	  "platform_hardware": {
+	  "hardware": {
 		"type": "object",
 		"properties": {
 		  "battery": {
 			"type": "object",
 			"properties": {
-			  "battery_id": { "type": "integer" },
-			  "battery_name": { "type": "string" },
-			  "battery_description": { "type": "string" },
-			  "battery_ini_voltage": { "type": "integer" }
+			  "id": { "type": "integer" },
+			  "name": { "type": "string" },
+			  "description": { "type": "string" },
+			  "ini_voltage": { "type": "integer" }
 			}
 		  },
 		  "batteryPack": { "type": "string" },
@@ -177,7 +177,7 @@
 		  "special_feature": { "type": "string" }
 		}
 	  },
-	  "platform_configuration": {
+	  "configuration": {
 		"type": "object",
 		"properties": {
 		  "cycle_time": { "type": "string" },
@@ -197,35 +197,35 @@
 		  "data_rtqc_method": { "type": "object" }
 		}
 	  },
-	  "platform_weblinks": { "type": "array" },
-	  "platform_agencies": {
+	  "weblinks": { "type": "array" },
+	  "agencies": {
 		"type": "array",
 		"items": { "$ref": "#/definitions/agency" }
 	  },
-	  "platform_statuses": {
+	  "statuses": {
 		"type": "array",
 		"items": { "$ref": "#/definitions/platform_status" }
 	  },
-	  "platform_sites": { "type": "array" },
-	  "platform_latest_status": { "$ref": "#/definitions/platform_status" },
-	  "platform_contributors": {
+	  "sites": { "type": "array" },
+	  "latest_status": { "$ref": "#/definitions/platform_status" },
+	  "contributors": {
 		"type": "array",
 		"items": { "$ref": "#/definitions/contact" }
 	  },
-	  "platform_observations": {
+	  "observations": {
 		"type": "array",
 		"items": { "$ref": "#/definitions/observation" }
 	  },
-	  "platform_locations": {
+	  "locations": {
 		"type": "array",
 		"items": {
 		  "type": "object",
 		  "properties": {
-			"location_date": { "type": "string", "format": "date-time" },
-			"location_latitude": { "type": "number" },
-			"location_longitude": { "type": "number" }
+			"date": { "type": "string", "format": "date-time" },
+			"latitude": { "type": "number" },
+			"longitude": { "type": "number" }
 		  },
-		  "required": ["location_date", "location_latitude", "location_longitude"]
+		  "required": ["date", "latitude", "longitude"]
 		}
 	  }
 	},

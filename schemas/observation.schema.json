@@ -2,70 +2,70 @@
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"type": "object",
 	"properties": {
-	  "observation_date": {
+	  "date": {
 		"type": "string",
 		"format": "date-time"
 	  },
-	  "observation_latitude": {
+	  "latitude": {
 		"type": "number"
 	  },
-	  "observation_longitude": {
+	  "longitude": {
 		"type": "number"
 	  },
-	  "observation_cycle_number": {
+	  "cycle_number": {
 		"type": "integer"
 	  },
-	  "observation_data_status": {
+	  "data_status": {
 		"type": "object",
 		"properties": {
-		  "data_status_id": {
+		  "id": {
 			"type": "integer"
 		  },
-		  "data_status_name": {
+		  "name": {
 			"type": "string"
 		  }
 		},
-		"required": ["data_status_id", "data_status_name"]
+		"required": ["id", "name"]
 	  },
-	  "observation_data_assembly_center": {
+	  "data_assembly_center": {
 		"type": "object",
 		"properties": {
-		  "dac_id": {
+		  "id": {
 			"type": "integer"
 		  },
-		  "dac_name": {
+		  "name": {
 			"type": "string"
 		  },
-		  "dac_name_short": {
+		  "name_short": {
 			"type": "string"
 		  }
 		},
-		"required": ["dac_id", "dac_name"]
+		"required": ["id", "name"]
 	  },
-	  "observation_data_file": {
+	  "data_file": {
 		"type": "string"
 	  },
-	  "observation_variables": {
+	  "variables": {
 		"type": "array",
 		"items": {
 		  "type": "object",
 		  "properties": {
-			"variable_id": {
+			"id": {
 			  "type": "integer"
 			},
-			"variable_name": {
+			"name": {
 			  "type": "string"
 			},
-			"variable_name_short": {
+			"name_short": {
 			  "type": "string"
 			},
-			"variable_description": {
+			"description": {
 			  "type": "string"
 			},
-			"variable_wigos_code": {
+			"wigos_code": {
 			  "type": "string"
 			},
-			"variable_argo_ref": {
+			"argo_ref": {
 			  "type": "string"
 			},
 			"qc": {
@@ -76,15 +76,15 @@
 			}
 		  },
 		  "required": [
-			"variable_id",
-			"variable_name"
+			"id",
+			"name"
 		  ]
 		}
 	  }
 	},
 	"required": [
-	  "observation_date",
-	  "observation_latitude",
-	  "observation_longitude"
+	  "date",
+	  "latitude",
+	  "longitude"
 	]
   }

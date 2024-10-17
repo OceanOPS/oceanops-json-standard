@@ -2,100 +2,100 @@
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"type": "object",
 	"properties": {
-	  "telecom_type": {
+	  "type": {
 		"type": "object",
 		"properties": {
-		  "telecom_type_id": {
+		  "id": {
 			"type": "integer"
 		  },
-		  "telecom_type_name": {
+		  "name": {
 			"type": "string"
 		  },
-		  "telecom_type_description": {
+		  "description": {
 			"type": "string"
 		  }
 		},
-		"required": ["telecom_type_id", "telecom_type_name"]
+		"required": ["id", "name"]
 	  },
-	  "telecom_service": {
+	  "service": {
 		"type": "object",
 		"properties": {
-		  "telecom_service_id": {
+		  "id": {
 			"type": "integer"
 		  },
-		  "telecom_service_name": {
+		  "name": {
 			"type": "string"
 		  },
-		  "telecom_service_description": {
+		  "description": {
 			"type": "string"
 		  }
 		},
-		"required": ["telecom_service_id", "telecom_service_name"]
+		"required": ["id", "name"]
 	  },
-	  "telecom_format": {
+	  "format": {
 		"type": "object",
 		"properties": {
-		  "telecom_format_id": {
+		  "id": {
 			"type": "integer"
 		  },
-		  "telecom_format_name": {
+		  "name": {
 			"type": "string"
 		  },
-		  "telecom_format_description": {
+		  "description": {
 			"type": "string"
 		  }
 		},
-		"required": ["telecom_format_id", "telecom_format_name"]
+		"required": ["id", "name"]
 	  },
-	  "telecom_number": {
+	  "number": {
 		"type": "string"
 	  },
-	  "telecom_imei": {
+	  "imei": {
 		"type": "string",
 		"pattern": "^[0-9]{15}$"
 	  },
-	  "telecom_latency": {
+	  "latency": {
 		"type": "object",
 		"properties": {
-		  "latency_id": {
+		  "id": {
 			"type": "integer"
 		  },
-		  "latency_name": {
+		  "name": {
 			"type": "string"
 		  },
-		  "latency_name_short": {
+		  "name_short": {
 			"type": "string"
 		  },
-		  "latency_minutes": {
+		  "minutes": {
 			"type": "integer"
 		  }
 		},
-		"required": ["latency_id", "latency_name"]
+		"required": ["id", "name"]
 	  },
-	  "telecom_tracking_system": {
+	  "tracking_system": {
 		"type": "object",
 		"properties": {
-		  "tracking_system_id": {
+		  "id": {
 			"type": "integer"
 		  },
-		  "tracking_system_name": {
+		  "name": {
 			"type": "string"
 		  },
-		  "tracking_system_name_short": {
+		  "name_short": {
 			"type": "string"
 		  },
-		  "tracking_system_wigos_code": {
+		  "wigos_code": {
 			"type": "string"
 		  }
 		},
-		"required": ["tracking_system_id", "tracking_system_name"]
+		"required": ["id", "name"]
 	  },
 	  "telecom_is_backup": {
 		"type": "boolean"
 	  }
 	},
 	"required": [
-	  "telecom_type",
-	  "telecom_number"
+	  "type",
+	  "number"
 	]
   }

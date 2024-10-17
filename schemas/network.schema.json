@@ -2,27 +2,27 @@
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"type": "object",
 	"properties": {
-	  "network_id": {
+	  "id": {
 		"type": "integer",
 		"description": "Unique identifier for the network"
 	  },
-	  "network_name": {
+	  "name": {
 		"type": "string",
 		"description": "Full name of the network"
 	  },
-	  "network_name_short": {
+	  "name_short": {
 		"type": "string",
 		"description": "Short name or abbreviation of the network"
 	  },
-	  "network_description": {
+	  "description": {
 		"type": "string",
 		"description": "Brief description of the network"
 	  },
-	  "network_rank": {
+	  "rank": {
 		"type": "integer",
 		"description": "Rank or priority of the network"
 	  },
-	  "network_wigos_code": {
+	  "wigos_code": {
 		"type": "string",
 		"description": "WIGOS (WMO Integrated Global Observing System) code for the network"
 	  },
@@ -31,5 +31,5 @@
 		"description": "Parent network of this network, if any"
 	  }
 	},
-	"required": ["network_id", "network_name"]
+	"required": ["id", "name"]
   }
