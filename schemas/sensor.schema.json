@@ -2,17 +2,49 @@
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"type": "object",
 	"properties": {
-	  "id": {
-		"type": ["integer", "null"],
-		"description": "Unique identifier for the sensor"
-	  },
-	  "name": {
-		"type": "string",
-		"description": "Full name of the sensor"
-	  },
-	  "name_short": {
-		"type": "string",
-		"description": "Short name or abbreviation of the sensor"
+	  "model": {
+		"id": {
+			"type": ["integer", "null"],
+			"description": "Unique identifier for the sensor model"
+		},
+		"name": {
+			"type": "string",
+			"description": "Full name of the sensor model"
+		},
+		"name_short": {
+			"type": "string",
+			"description": "Short name or abbreviation of the sensor"
+		},
+		"types": {
+			"type": "array",
+			"items": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "integer",
+					"description": "Unique identifier for the sensor type"
+				},
+				"name": {
+					"type": "string",
+					"description": "Full name of the sensor type"
+				},
+				"name_short": {
+					"type": "string",
+					"description": "Short name or abbreviation of the sensor type"
+				},
+				"description": {
+					"type": "string",
+					"description": "Detailed description of the sensor type"
+				},
+				"variable": {
+					"$ref": "#/definitions/variable",
+					"description": "Variable potentially measured by this type of sensor"
+				}
+			},
+			"required": ["id", "name", "variable"],
+			"additionalProperties": false
+			}
+		}
 	  },
 	  "serial_number": {
 		"type": "string",
@@ -55,53 +87,15 @@
 		"type": "array",
 		"description": "Networks the sensor is part of"
 	  },
-	  "types": {
+	  "measuredVariables": {
 		"type": "array",
-		"items": {
-		  "type": "object",
-		  "properties": {
-			"id": {
-			  "type": "integer",
-			  "description": "Unique identifier for the sensor type"
-			},
-			"name": {
-			  "type": "string",
-			  "description": "Full name of the sensor type"
-			},
-			"name_short": {
-			  "type": "string",
-			  "description": "Short name or abbreviation of the sensor type"
-			},
-			"description": {
-			  "type": "string",
-			  "description": "Detailed description of the sensor type"
-			},
-			"variable": {
-			  "type": "object",
-			  "description": "Variable measured onboard this platform.",
-			  "properties": {
-				"id": {
-				  "type": "integer",
-				  "description": "Unique identifier for the variable measured"
-				},
-				"name": {
-				  "type": "string",
-				  "description": "Name of the variable measured"
-				},
-				"description": {
-				  "type": "string",
-				  "description": "Detailed description of the variable measured"
-				}
-			  },
-			  "required": ["id", "name"],
-			  "additionalProperties": false
-			}
-		  },
-		  "required": ["id", "name", "variable"],
-		  "additionalProperties": false
-		}
+		"description": "Variables actually measured by the sensor onboard this platform",
+		"items": { "$ref": "#/definitions/variable" }
 	  }
 	},
-	"required": ["id", "name", "types"],
-	"additionalProperties": false
+	"required": ["id", "name", "types", "measuredVariables"],
+	"additionalProperties": false,
+	"definitions": {
+	  "variable": { "$ref": "variable.schema.json" }
+	}
   }

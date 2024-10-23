@@ -1,0 +1,21 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"properties": {
+	  "id": {
+		"type": "integer",
+		"description": "Unique identifier for the variable measured"
+	  },
+	  "name": {
+		"type": "string",
+		"description": "Name of the variable measured"
+	  },
+	  "description": {
+		"type": "string",
+		"description": "Detailed description of the variable measured"
+	  }
+	},
+	"required": ["id", "name"],
+	"additionalProperties": false
+  }
+  
