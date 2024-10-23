@@ -78,6 +78,7 @@
 			},
 			"variable": {
 			  "type": "object",
+			  "description": "Variable measured onboard this platform.",
 			  "properties": {
 				"id": {
 				  "type": "integer",

@@ -77,6 +77,7 @@
 	  "deployment": {
 		"type": "object",
 		"properties": {
+		  "id": { "type": "integer", "description": "ID of the platform's deployment" },
 		  "method": {
 			"type": "object",
 			"properties": {
@@ -102,6 +103,7 @@
 	  "retrieval": {
 		"type": "object",
 		"properties": {
+		  "id": { "type": "integer", "description": "ID of the platform's retrieval" },
 		  "status": { "type": "object" },
 		  "post_retrieval_status": { "type": "object" },
 		  "latitude": { "type": ["number", "null"] },
