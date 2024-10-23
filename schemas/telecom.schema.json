@@ -89,9 +89,6 @@
 		  }
 		},
 		"required": ["id", "name"]
-	  },
-	  "telecom_is_backup": {
-		"type": "boolean"
 	  }
 	},
 	"required": [

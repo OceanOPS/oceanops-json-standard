@@ -14,6 +14,10 @@
 		"type": "string",
 		"description": "Short name or abbreviation of the sensor"
 	  },
+	  "serial_number": {
+		"type": "string",
+		"description": "The sensor instrument serial number"
+	  },
 	  "link_url": {
 		"type": "string",
 		"format": "uri",
@@ -31,6 +35,9 @@
 	  "description": {
 		"type": "string",
 		"description": "Detailed description of the sensor"
+	  },
+	  "height": {
+		"type": ["number", "null"]
 	  },
 	  "yearly_drift": {
 		"type": ["number", "null"],
@@ -71,6 +78,7 @@
 			},
 			"variable": {
 			  "type": "object",
+			  "description": "Variable measured onboard this platform.",
 			  "properties": {
 				"id": {
 				  "type": "integer",

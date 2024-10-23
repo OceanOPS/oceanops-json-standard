@@ -26,6 +26,9 @@
 		"type": "integer",
 		"description": "Weight of the platform model in kilograms"
 	  },
+	  "manufacturer": {
+		"$ref": "#/definitions/agency"
+	  },
 	  "type": {
 		"type": "object",
 		"properties": {
@@ -78,5 +81,8 @@
 	  }
 	},
 	"required": ["id", "name", "type"],
-	"additionalProperties": false
+	"additionalProperties": false,
+	"definitions": {
+	  "agency": { "$ref": "agency.schema.json" }
+	}
 }

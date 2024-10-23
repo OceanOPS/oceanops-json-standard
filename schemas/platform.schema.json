@@ -21,20 +21,39 @@
 		}
 	  },
 	  "project": { "type": "string" },
+	  "e_notification_date": { "type": "string" },
+	  "age": { "type": ["number", "null"] },
+	  "is_blacklisted": { "type": "boolean" },
 	  "site": {
 		"type": "object",
 		"properties": {
-		  "site_id": { "type": "integer" },
-		  "site_name": { "type": "string" },
-		  "site_description": { "type": "string" }
+		  "id": { "type": "integer" },
+		  "name": { "type": "string" },
+		  "description": { "type": "string" }
 		}
 	  },
 	  "name": { "type": "string" },
 	  "parent_ref": { "type": "string" },
 	  "activity_criterion": { "type": "integer" },
 	  "closure_criterion": { "type": "integer" },
-	  "class_categories": { "type": "array" },
-	  "area": { "type": "array" },
+	  "class_categories": { 
+		"type": "array", 
+		"items": {
+		  "id": {
+			"type": "integer",
+			"description": "Category ID"
+		  },
+		  "name": {
+			"type": "string",
+			"description": "Category name"
+		  }
+		} },
+	  "area_of_operation": {
+		"type": "array",
+		"items": {
+		  "$ref": "#/definitions/line"
+		}
+	  },
 	  "services": { "type": "array" },
 	  "networks": { 
 		"type": "array",
@@ -58,6 +77,7 @@
 	  "deployment": {
 		"type": "object",
 		"properties": {
+		  "id": { "type": "integer", "description": "ID of the platform's deployment" },
 		  "method": {
 			"type": "object",
 			"properties": {
@@ -76,12 +96,14 @@
 		  "ref_station_id": { "type": "string" },
 		  "no_site": { "type": "boolean" },
 		  "max_mooring_depth": { "type": ["number", "null"] },
+		  "score": { "type": ["number", "null"] },
 		  "operator": { "type": "object" }
 		}
 	  },
 	  "retrieval": {
 		"type": "object",
 		"properties": {
+		  "id": { "type": "integer", "description": "ID of the platform's retrieval" },
 		  "status": { "type": "object" },
 		  "post_retrieval_status": { "type": "object" },
 		  "latitude": { "type": ["number", "null"] },
@@ -100,7 +122,7 @@
 			}
 		  },
 		  "ship": { "$ref": "#/definitions/ship" },
-		  "ruise": { "$ref": "#/definitions/cruise" },
+		  "cruise": { "$ref": "#/definitions/cruise" },
 		  "local_contact_info": { "type": "string" },
 		  "description": { "type": "string" },
 		  "ref_station_id": { "type": "string" }
@@ -117,16 +139,14 @@
 	  "identifiers": {
 		"type": "object",
 		"properties": {
-		  "wmo_id": { "type": "string" },
+		  "gts_id": { "type": "string" },
 		  "serial_number": { "type": "string" },
 		  "internal_id": { "type": "string" },
 		  "wigos_id": { "type": "string" }
 		}
 	  },
-	  "telecoms": {
-		"type": "array",
-		"items": { "$ref": "#/definitions/telecom" }
-	  },
+	  "telecom": { "$ref": "#/definitions/telecom"},
+	  "backupTelecom": { "$ref": "#/definitions/telecom"},
 	  "sensors": {
 		"type": "array",
 		"items": { "$ref": "#/definitions/sensor" }
@@ -190,7 +210,7 @@
 		  "has_ice_detection_software": { "type": "boolean" }
 		}
 	  },
-	  "platform_data": {
+	  "platform_data_links": {
 		"type": "object",
 		"properties": {
 		  "data_url": { "type": "string" },
@@ -206,8 +226,8 @@
 		"type": "array",
 		"items": { "$ref": "#/definitions/platform_status" }
 	  },
-	  "sites": { "type": "array" },
 	  "latest_status": { "$ref": "#/definitions/platform_status" },
+	  "sites": { "type": "array" },
 	  "contributors": {
 		"type": "array",
 		"items": { "$ref": "#/definitions/contact" }
@@ -216,20 +236,18 @@
 		"type": "array",
 		"items": { "$ref": "#/definitions/observation" }
 	  },
+	  "latest_observation": {
+		"$ref": "#/definitions/observation" 
+	  },
 	  "locations": {
 		"type": "array",
-		"items": {
-		  "type": "object",
-		  "properties": {
-			"date": { "type": "string", "format": "date-time" },
-			"latitude": { "type": "number" },
-			"longitude": { "type": "number" }
-		  },
-		  "required": ["date", "latitude", "longitude"]
-		}
+		"items": { "$ref": "#/definitions/location" }
+	  },
+	  "latest_location": {
+		"$ref": "#/definitions/location" 
 	  }
 	},
-	"required": ["platform_id", "platform_ref", "platform_program"],
+	"required": ["id", "ref", "program"],
 	"definitions": {
 	  "country": { "$ref": "country.schema.json" },
 	  "ship": { "$ref": "ship.schema.json" },
@@ -241,6 +259,7 @@
 	  "observation": { "$ref": "observation.schema.json" },
 	  "platform_model": { "$ref": "platform_model.schema.json" },
 	  "network": { "$ref": "network.schema.json" },
-	  "sensor": { "$ref": "sensor.schema.json" }
+	  "sensor": { "$ref": "sensor.schema.json" },
+	  "location": { "$ref": "location.schema.json" }
 	}
   }
