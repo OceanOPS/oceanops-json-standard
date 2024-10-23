@@ -11,16 +11,28 @@
 	  "length": {
 		"type": "number"
 	  },
-	  "type_name": {
-		"type": "string"
+	  "vessel_type": {
+		"type": "object",
+		"items": {
+			"id": { "type": "integer" },
+			"name": { "type": "string" }
+		}
 	  },
+	  "cargo_height": { "type": "string" },
+	  "distance_bridge_bow": { "type": "string" },
+	  "max_speed": { "type": "string" },
+	  "comment": { "type": "string" },
 	  "contacts_sea_email_1": {
 		"type": "string",
 		"format": "email"
 	  },
-	  "imo": {
+	  "imo_number": {
 		"type": "string",
 		"pattern": "^[0-9]{7}$"
+	  },
+	  "mmsi": {
+		"type": "string",
+		"pattern": "^[0-9]{9}$"
 	  },
 	  "call_sign": {
 		"type": "string"
@@ -37,7 +49,7 @@
 		"type": "string",
 		"format": "email"
 	  },
-	  "ref": {
+	  "ices_code": {
 		"type": "string"
 	  },
 	  "contact_sea_email_2": {
@@ -49,9 +61,6 @@
 	  },
 	  "name": {
 		"type": "string"
-	  },
-	  "type_id": {
-		"type": "integer"
 	  },
 	  "id": {
 		"type": "integer"
