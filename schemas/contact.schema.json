@@ -6,22 +6,27 @@
 		"type": "object",
 		"properties": {
 		  "id": {
-			"type": "integer"
+			"type": "integer",
+			"description": "Unique identifier for the contact's role."
 		  },
 		  "name": {
-			"type": "string"
+			"type": "string",
+			"description": "Name of the contact's role."
 		  }
 		},
 		"required": ["id", "name"]
 	  },
 	  "name": {
-		"type": "string"
+		"type": "string",
+		"description": "Full name of the contact."
 	  },
 	  "id": {
-		"type": "integer"
+		"type": "integer",
+		"description": "Unique identifier for the contact."
 	  },
 	  "country": {
-		"$ref": "#/definitions/country"
+		"$ref": "#/definitions/country",
+		"description": "Country associated with the contact."
 	  },
 	  "agencies": {
 		"type": "array",

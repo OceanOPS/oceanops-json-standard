@@ -3,13 +3,16 @@
 	"type": "object",
 	"properties": {
 	  "id": {
-		"type": ["integer", "null"]
+		"type": ["integer", "null"],
+		"description": "Unique identifier for the cruise."
 	  },
 	  "name": {
-		"type": "string"
+		"type": "string",
+		"description": "Name of the cruise."
 	  },
 	  "ref": {
-		"type": "string"
+		"type": "string",
+		"description":""
 	  },
 	  "iioe2_id": {
 		"type": "string"
@@ -25,20 +28,25 @@
 	  },
 	  "start_date": {
 		"type": "string",
-		"format": "date"
+		"format": "date",
+		"description": "Start date of teh cruise."
 	  },
 	  "end_date": {
 		"type": "string",
-		"format": "date"
+		"format": "date",
+		"description": "End date of the cruise."
 	  },
 	  "arrival_port": {
-		"$ref": "#/definitions/port"
+		"$ref": "#/definitions/port",
+		"description": "Arrival port of the cruise."
 	  },
 	  "departure_port": {
-		"$ref": "#/definitions/port"
+		"$ref": "#/definitions/port",
+		"description": "Departure port of the cruise."
 	  },
 	  "ship": {
-		"$ref": "#/definitions/ship"
+		"$ref": "#/definitions/ship",
+		"description": "Ship associated to the cruise."
 	  },
 	  "status": {
 		"type": "object",
@@ -153,7 +161,7 @@
 	  }
 	},
 	"required": [
-	  "cruise_id", "cruise_name"
+	  "id", "name"
 	],
 	"definitions": {
 	  "port": { "$ref": "port.schema.json" },
