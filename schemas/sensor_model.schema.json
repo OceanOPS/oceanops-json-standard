@@ -2,7 +2,6 @@
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"type": "object",
 	"properties": {
-	  "model": {
 		"id": {
 			"type": ["integer", "null"],
 			"description": "Unique identifier for the sensor model"
@@ -44,12 +43,7 @@
 			"required": ["id", "name", "variable"],
 			"additionalProperties": false
 			}
-		}
-	  },
-	  "serial_number": {
-		"type": "string",
-		"description": "The sensor instrument serial number"
-	  },
+		},
 	  "link_url": {
 		"type": "string",
 		"format": "uri",
@@ -68,17 +62,6 @@
 		"type": "string",
 		"description": "Detailed description of the sensor"
 	  },
-	  "height": {
-		"type": ["number", "null"]
-	  },
-	  "yearly_drift": {
-		"type": ["number", "null"],
-		"description": "Annual drift of the sensor measurements"
-	  },
-	  "axes_amount": {
-		"type": ["integer", "null"],
-		"description": "Number of axes the sensor measures"
-	  },
 	  "agency": {
 		"type": "object",
 		"description": "Agency associated with the sensor"
@@ -86,14 +69,9 @@
 	  "networks": {
 		"type": "array",
 		"description": "Networks the sensor is part of"
-	  },
-	  "measuredVariables": {
-		"type": "array",
-		"description": "Variables actually measured by the sensor onboard this platform",
-		"items": { "$ref": "#/definitions/variable" }
 	  }
 	},
-	"required": ["id", "name", "types", "measuredVariables"],
+	"required": ["id", "name", "types"],
 	"additionalProperties": false,
 	"definitions": {
 	  "variable": { "$ref": "variable.schema.json" }

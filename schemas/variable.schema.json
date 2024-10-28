@@ -13,6 +13,10 @@
 	  "description": {
 		"type": "string",
 		"description": "Detailed description of the variable measured"
+	  },
+	  "wigos_code": {
+		"type": "string",
+		"description": "URL link to variable in WMO reference table"
 	  }
 	},
 	"required": ["id", "name"],
