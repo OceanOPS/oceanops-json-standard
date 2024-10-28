@@ -6,13 +6,16 @@
 		"type": "object",
 		"properties": {
 		  "id": {
-			"type": "integer"
+			"type": "integer", 
+			"description": "Unique identifier for the telecom type."
 		  },
 		  "name": {
-			"type": "string"
+			"type": "string", 
+			"description": "Name of the telecom type."
 		  },
 		  "description": {
-			"type": "string"
+			"type": "string",
+			"description": "Description of the telecom type."
 		  }
 		},
 		"required": ["id", "name"]
@@ -21,13 +24,16 @@
 		"type": "object",
 		"properties": {
 		  "id": {
-			"type": "integer"
+			"type": "integer", 
+			"description": "Unique identifier for the telecom service."
 		  },
 		  "name": {
-			"type": "string"
+			"type": "string", 
+			"description": "Name of the telecom service."
 		  },
 		  "description": {
-			"type": "string"
+			"type": "string",
+			"description": "Description of the telecom service."
 		  }
 		},
 		"required": ["id", "name"]
@@ -36,38 +42,47 @@
 		"type": "object",
 		"properties": {
 		  "id": {
-			"type": "integer"
+			"type": "integer",
+			"description": "Unique identifier for the telecom format."
 		  },
 		  "name": {
-			"type": "string"
+			"type": "string", 
+			"description": "Name of the telecom format."
 		  },
 		  "description": {
-			"type": "string"
+			"type": "string",
+			"description": "Description of the telecom format."
 		  }
 		},
 		"required": ["id", "name"]
 	  },
 	  "number": {
-		"type": "string"
+		"type": "string", 
+		"description": "Telecom number."
 	  },
 	  "imei": {
 		"type": "string",
-		"pattern": "^[0-9]{15}$"
+		"pattern": "^[0-9]{15}$", 
+		"description": "IMEI number."
 	  },
 	  "latency": {
 		"type": "object",
 		"properties": {
 		  "id": {
-			"type": "integer"
+			"type": "integer", 
+			"description": "Unique identifier for the latency."
 		  },
 		  "name": {
-			"type": "string"
+			"type": "string", 
+			"description": "Name of the latency."
 		  },
 		  "name_short": {
-			"type": "string"
+			"type": "string", 
+			"description": "Name short of the latency."
 		  },
 		  "minutes": {
-			"type": "integer"
+			"type": "integer", 
+			"description": "Latency duration in minutes."
 		  }
 		},
 		"required": ["id", "name"]

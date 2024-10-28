@@ -29,5 +29,5 @@
 		"description": "Simplified name of the port"
 	  }
 	},
-	"required": ["ountry_code", "code", "code_full", "code_name", "code_name_simple"]
+	"required": ["country_code", "code", "code_full", "code_name", "code_name_simple"]
   }
