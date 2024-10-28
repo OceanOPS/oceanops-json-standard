@@ -147,9 +147,9 @@
 	  },
 	  "telecom": { "$ref": "#/definitions/telecom"},
 	  "backupTelecom": { "$ref": "#/definitions/telecom"},
-	  "sensors": {
+	  "measured_variables": {
 		"type": "array",
-		"items": { "$ref": "#/definitions/sensor" }
+		"items": { "$ref": "#/definitions/measured_variable" }
 	  },
 	  "platform_description": { "type": "string" },
 	  "ptf_software": {
@@ -260,6 +260,7 @@
 	  "platform_model": { "$ref": "platform_model.schema.json" },
 	  "network": { "$ref": "network.schema.json" },
 	  "sensor": { "$ref": "sensor.schema.json" },
-	  "location": { "$ref": "location.schema.json" }
+	  "location": { "$ref": "location.schema.json" },
+	  "measured_variable": { "$ref": "measured_variable.schema.json" }
 	}
   }
