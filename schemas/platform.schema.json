@@ -3,38 +3,51 @@
 	"type": "object",
 	"properties": {
 	  "id": {
-		"type": "integer"
+		"type": "integer", 
+		"description": "Unique identifier of the platform."
 	  },
 	  "ref": {
-		"type": "string"
+		"type": "string",
+		"description": "Unique OceanOPS platform identifier."
 	  },
+
 	  "program": {
-		"type": "object",
-		"properties": {
-		  "id": { "type": "integer" },
-		  "name": { "type": "string" },
-		  "description": { "type": "string" },
-		  "country": { "$ref": "#/definitions/country" },
-		  "name_short": { "type": "string" },
-		  "wigos_code": { "type": "string" },
-		  "network": { "$ref": "#/definitions/network" }
-		}
+		"$ref": "#/definitions/program"
 	  },
-	  "project": { "type": "string" },
-	  "e_notification_date": { "type": "string" },
-	  "age": { "type": ["number", "null"] },
-	  "is_blacklisted": { "type": "boolean" },
+	  "project": { 
+		"type": "string", 
+		"description": ""
+	  },
+	  "e_notification_date": { 
+		"type": "string",
+		"description": ""
+	  },
+	  "age": { 
+		"type": ["number", "null"], 
+		"description": ""
+	  },
+	  "is_blacklisted": { 
+		"type": "boolean", 
+		"description": "" 
+	  },
 	  "site": {
-		"type": "object",
+		"type": "array",
 		"properties": {
 		  "id": { "type": "integer" },
 		  "name": { "type": "string" },
 		  "description": { "type": "string" }
 		}
 	  },
-	  "name": { "type": "string" },
-	  "parent_ref": { "type": "string" },
-	  "activity_criterion": { "type": "integer" },
+	  "name": { 
+		"type": "string", 
+		"description": "Name of the platform." 
+	  },
+	  "parent_ref": { 
+		"type": "string", 
+		"description": "" 
+	  },
+	  "activity_criterion": { 
+		"type": "integer" },
 	  "closure_criterion": { "type": "integer" },
 	  "class_categories": { 
 		"type": "array", 
@@ -249,6 +262,7 @@
 	},
 	"required": ["id", "ref", "program"],
 	"definitions": {
+	  "program": { "$ref": "program.schema.json" },		
 	  "country": { "$ref": "country.schema.json" },
 	  "ship": { "$ref": "ship.schema.json" },
 	  "cruise": { "$ref": "cruise.schema.json" },
