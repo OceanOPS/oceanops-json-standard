@@ -38,6 +38,20 @@
 		  "description": { "type": "string" }
 		}
 	  },
+	  "categories": {
+		"type": "array",
+		"properties": {
+		  "id": { "type": "integer" },
+		  "name": { "type": "string" }
+		}
+	  },
+	  "data_status": {
+		"type": "object",
+		"properties": {
+		  "id": { "type": "integer" },
+		  "name": { "type": "string" }
+		}
+	  },
 	  "name": { 
 		"type": "string", 
 		"description": "Name of the platform." 
@@ -77,6 +91,10 @@
 		"items": { "$ref": "#/definitions/network" }
 		},
 	  "all_networks": {
+		"type": "array",
+		"items": { "$ref": "#/definitions/network" }
+	  },
+	  "observing_networks": {
 		"type": "array",
 		"items": { "$ref": "#/definitions/network" }
 	  },
@@ -173,20 +191,15 @@
 		  "version": { "type": "string" }
 		}
 	  },
-	  "software": {
-		"type": "object",
-		"properties": {
-		  "name": { "type": "string" },
-		  "version": { "type": "string" },
-		  "format": { "type": "string" }
-		}
-	  },
 	  "firmware": {
 		"type": "object",
 		"properties": {
 		  "name": { "type": "string" },
 		  "serial_ref": { "type": "string" },
-		  "bluetooth_id": { "type": "string" }
+		  "bluetooth_id": { "type": "string" },
+		  "software_name": { "type": "string" },
+		  "software_version": { "type": "string" },
+		  "format_ref": { "type": "string" }
 		}
 	  },
 	  "hardware": {
