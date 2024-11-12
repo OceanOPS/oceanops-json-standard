@@ -22,7 +22,8 @@ Alternatively, fetch a platform sample array from the OceanOPS API in OceanJSON 
 
 https://www.ocean-ops.org/api/data/oceanjson/platforms?fields=ref,status
 
-You can use [OceanUI](https://www.ocean-ops.org/ui) to
+You can use <a href="https://www.ocean-ops.org/ui" target="_blank">OceanUI</a>
+ to
  help build the URL for this request, to include the filters and fields you want. 
  To do so in OceanUI, navigate to the Platforms table view, select colums, sorting options and any filters you like. Then click Export > OceanJSON permalink, and copy the URL.
 
