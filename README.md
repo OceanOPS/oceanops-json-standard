@@ -16,7 +16,8 @@ JSON Schema files for each key entity in /schemas directory.
 
 ## Examples
 
-Sample JSON files showing how a complete JSON document would look when adhering to your format in /examples directory.
+In /examples directory, find sample JSON files showing how a complete JSON document would look like.
+
 Alternatively, fetch a platform sample array from the OceanOPS API in OceanJSON format:
 
 https://www.ocean-ops.org/api/data/oceanjson/platforms?fields=ref,status
