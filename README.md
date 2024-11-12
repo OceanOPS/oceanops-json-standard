@@ -17,6 +17,11 @@ JSON Schema files for each key entity in /schemas directory.
 ## Examples
 
 Sample JSON files showing how a complete JSON document would look when adhering to your format in /examples directory.
+Alternatively, fetch a platform sample array from the OceanOPS API in OceanJSON format:
+https://www.ocean-ops.org/api/data/oceanjson/platforms?page=1&pageSize=30&fields=ref,status,observingNetworks,programName
+You can use [OceanUI](https://www.ocean-ops.org/ui) to
+ help build the URL for this request, to include the filters and fields you want. 
+ To do so in OceanUI, navigate to the Platforms table view, select colums, sorting options and any filters ypou like, the click Export > OceanJSON permalink, and copy the URL.
 
 ## Property Key Case 
 
